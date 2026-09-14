@@ -1,0 +1,99 @@
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frontend data flow diagram">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#0d6efd"/>
+      <stop offset="100%" stop-color="#084298"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f4f8ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <style>
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 600 16px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+      .label { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .small { font: 600 13px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .tiny { font: 600 11px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+      .arrow { stroke: #3b82f6; stroke-width: 3; fill: none; stroke-linecap: round; marker-end: url(#arrow); }
+      .dashed { stroke-dasharray: 8 8; }
+      .box { fill: url(#box); stroke: #cbd5e1; stroke-width: 1.5; }
+      .navy { fill: #0d6efd; }
+      .light { fill: #e0f2fe; }
+      .muted { fill: #eff6ff; }
+    </style>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bg)" rx="24"/>
+  <rect x="38" y="20" width="824" height="64" fill="url(#header)" rx="18"/>
+  <text x="60" y="58" class="title" fill="#ffffff">Frontend Data Flow</text>
+  <text x="60" y="78" class="subtitle" fill="#dbeafe">Actual project architecture based on HTML, CSS, JavaScript, and Bootstrap</text>
+
+  <rect x="70" y="120" width="130" height="88" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="135" y="155" text-anchor="middle" class="label">User</text>
+  <text x="135" y="178" text-anchor="middle" class="small">Visits</text>
+  <text x="135" y="194" text-anchor="middle" class="small">site pages</text>
+
+  <rect x="250" y="120" width="170" height="110" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="335" y="155" text-anchor="middle" class="label">HTML Pages</text>
+  <text x="335" y="178" text-anchor="middle" class="tiny">index.html</text>
+  <text x="335" y="195" text-anchor="middle" class="tiny">about.html</text>
+  <text x="335" y="212" text-anchor="middle" class="tiny">portfolio.html</text>
+  <text x="335" y="229" text-anchor="middle" class="tiny">services.html / contact.html</text>
+
+  <rect x="470" y="120" width="150" height="110" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="545" y="155" text-anchor="middle" class="label">Bootstrap</text>
+  <text x="545" y="178" text-anchor="middle" class="small">CSS + JS</text>
+  <text x="545" y="195" text-anchor="middle" class="tiny">Bootstrap Icons</text>
+  <text x="545" y="212" text-anchor="middle" class="tiny">Responsive UI</text>
+
+  <rect x="670" y="120" width="150" height="110" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="745" y="155" text-anchor="middle" class="label">Custom CSS</text>
+  <text x="745" y="178" text-anchor="middle" class="small">assets/css/style.css</text>
+  <text x="745" y="195" text-anchor="middle" class="tiny">Layout</text>
+  <text x="745" y="212" text-anchor="middle" class="tiny">Colors / cards</text>
+
+  <rect x="270" y="280" width="170" height="110" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="355" y="315" text-anchor="middle" class="label">JavaScript</text>
+  <text x="355" y="338" text-anchor="middle" class="small">assets/js/scripts.js</text>
+  <text x="355" y="355" text-anchor="middle" class="tiny">Current year</text>
+  <text x="355" y="372" text-anchor="middle" class="tiny">Active nav</text>
+
+  <rect x="490" y="280" width="165" height="110" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="572" y="315" text-anchor="middle" class="label">DOM</text>
+  <text x="572" y="338" text-anchor="middle" class="small">Contact form</text>
+  <text x="572" y="355" text-anchor="middle" class="tiny">Validation</text>
+  <text x="572" y="372" text-anchor="middle" class="tiny">Back-to-top</text>
+
+  <rect x="690" y="280" width="150" height="110" rx="18" class="box" filter="url(#shadow)"/>
+  <text x="765" y="315" text-anchor="middle" class="label">UI</text>
+  <text x="765" y="338" text-anchor="middle" class="small">Rendered pages</text>
+  <text x="765" y="355" text-anchor="middle" class="tiny">Hero, cards,</text>
+  <text x="765" y="372" text-anchor="middle" class="tiny">forms, map</text>
+
+  <line x1="200" y1="164" x2="250" y2="164" class="arrow dashed"/>
+  <line x1="420" y1="164" x2="470" y2="164" class="arrow dashed"/>
+  <line x1="620" y1="164" x2="670" y2="164" class="arrow dashed"/>
+  <line x1="355" y1="230" x2="355" y2="280" class="arrow dashed"/>
+  <line x1="572" y1="230" x2="572" y2="280" class="arrow dashed"/>
+  <line x1="765" y1="230" x2="765" y2="280" class="arrow dashed"/>
+  <line x1="440" y1="335" x2="490" y2="335" class="arrow"/>
+  <line x1="655" y1="335" x2="690" y2="335" class="arrow"/>
+
+  <rect x="70" y="430" width="310" height="52" rx="14" class="muted"/>
+  <text x="90" y="454" class="small">External resources:</text>
+  <text x="223" y="454" class="tiny">Google Maps iframe, remote profile photo</text>
+
+  <rect x="410" y="430" width="360" height="52" rx="14" class="light"/>
+  <text x="430" y="454" class="small">Note:</text>
+  <text x="486" y="454" class="tiny">HTML references assets/js/script.js, but the implemented logic is in assets/js/scripts.js</text>
+</svg>
